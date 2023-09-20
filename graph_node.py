@@ -72,7 +72,7 @@ if __name__ == '__main__':
         combined_column = pd.concat([source_column, target_column])
         element_counts = combined_column.value_counts()
 
-        # 筛选出现三次及以上的元素
+        # 筛选出现一定次数以上的元素
         user_to_crawl = element_counts[element_counts >= config.NODE_CRAWLER_FILTER].index.unique().tolist()
 
     print(len(user_to_crawl))
